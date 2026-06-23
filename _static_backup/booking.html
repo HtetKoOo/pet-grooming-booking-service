@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Planet - Book Now</title>
+    
+    <!-- Google Fonts: Inter and Noto Sans Myanmar -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Myanmar:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Link to Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navigation Bar -->
+    <header class="main-header">
+        <div class="container navbar-container">
+            <a href="index.html" class="logo">
+                <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.477 2 2 6.477 2 12c0 1.2.21 2.35.59 3.42l1.66-1.66a6.002 6.002 0 0 1 7.23-7.23l1.66-1.66A9.957 9.957 0 0 0 12 2zm8.59 6.58l-1.66 1.66a6.002 6.002 0 0 1-7.23 7.23l-1.66 1.66c1.07.38 2.22.59 3.42.59 5.523 0 10-4.477 10-10 0-1.2-.21-2.35-.59-3.42z"/>
+                    <circle cx="12" cy="12" r="4" />
+                    <path d="M12 6a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm-5.5 2.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm11 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM6.5 14.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm11 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                </svg>
+                <span class="logo-text">Pet Planet</span>
+            </a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">အဓိကစာမျက်နှာ</a>
+                <a href="services.html" class="nav-link">ဝန်ဆောင်မှုများ</a>
+                <a href="system.html" class="nav-link">စနစ်အကြောင်း</a>
+                <a href="impact.html" class="nav-link">အကျိုးကျေးဇူးများ</a>
+                <a href="booking.html" class="nav-link nav-btn-scroll active">ကြိုတင်ဘွတ်ကင်လုပ်ရန်</a>
+            </nav>
+
+            <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Booking Simulator Section -->
+        <section id="booking" class="section booking-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Booking Simulator</span>
+                    <h2 class="section-title text-white">အခုပဲ ကြိုတင်ဘွတ်ကင်လုပ်ပြီး စမ်းသပ်ကြည့်ပါ</h2>
+                    <p class="section-description text-white-muted">အောက်ပါ Form တွင် သင့်အချက်အလက်များနှင့် အချစ်တော်လေး၏ အချက်အလက်များကို ရွေးချယ်ပြီး ဘွတ်ကင်စနစ်ကို တိုက်ရိုက်စမ်းသပ်ကြည့်နိုင်ပါသည်။</p>
+                </div>
+
+                <div class="simulator-wrapper">
+                    <!-- Simulation Form -->
+                    <div class="simulator-card">
+                        <div class="wizard-steps-header">
+                            <div class="wizard-step-indicator active" id="wiz-step-1">
+                                <span class="wiz-step-number">1</span>
+                                <span class="wiz-step-name">Pet & Services</span>
+                            </div>
+                            <div class="wizard-step-line" id="wiz-line-1"></div>
+                            <div class="wizard-step-indicator" id="wiz-step-2">
+                                <span class="wiz-step-number">2</span>
+                                <span class="wiz-step-name">Date & Time</span>
+                            </div>
+                            <div class="wizard-step-line" id="wiz-line-2"></div>
+                            <div class="wizard-step-indicator" id="wiz-step-3">
+                                <span class="wiz-step-number">3</span>
+                                <span class="wiz-step-name">Checkout</span>
+                            </div>
+                        </div>
+
+                        <form id="bookingSimForm">
+                            <!-- Step 1: Pet & Services Panel -->
+                            <div class="wizard-step-content active" id="wiz-content-1">
+                                <h3 class="simulator-card-title">အိမ်မွေးတိရစ္ဆာန်နှင့် ဝန်ဆောင်မှု ရွေးချယ်ခြင်း</h3>
+                                
+                                <!-- Pet Type Selection -->
+                                <div class="form-group">
+                                    <label class="form-label">အိမ်မွေးတိရစ္ဆာန် အမျိုးအစား (Pet Type)</label>
+                                    <div class="pet-type-selector">
+                                        <label class="pet-type-option">
+                                            <input type="radio" name="petType" value="dog" checked>
+                                            <span class="type-box">
+                                                <span class="type-emoji">🐶</span>
+                                                <span class="type-text">Dog (ခွေး)</span>
+                                            </span>
+                                        </label>
+                                        <label class="pet-type-option">
+                                            <input type="radio" name="petType" value="cat">
+                                            <span class="type-box">
+                                                <span class="type-emoji">🐱</span>
+                                                <span class="type-text">Cat (ကြောင်)</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Breed Size Selection -->
+                                <div class="form-group">
+                                    <label class="form-label">အချစ်တော်လေး၏ အရွယ်အစား (Breed Size)</label>
+                                    <select class="form-select" name="breedSize" id="breedSize">
+                                        <option value="small">Small (အသေးစား) - Weight < 10kg</option>
+                                        <option value="medium">Medium (အလယ်အလတ်) - Weight 10kg - 25kg</option>
+                                        <option value="large">Large (အကြီးစား) - Weight > 25kg</option>
+                                    </select>
+                                </div>
+
+                                <!-- Add-ons Checkboxes -->
+                                <div class="form-group">
+                                    <label class="form-label">အပိုဆောင်း ဝန်ဆောင်မှုများ (Add-ons)</label>
+                                    <div class="addons-checkbox-group">
+                                        <label class="addon-checkbox-label">
+                                            <input type="checkbox" name="addons" value="teeth">
+                                            <span class="custom-checkbox"></span>
+                                            <span class="addon-name">Teeth Cleaning (+15m, +5,000 K)</span>
+                                        </label>
+                                        <label class="addon-checkbox-label">
+                                            <input type="checkbox" name="addons" value="deshed">
+                                            <span class="custom-checkbox"></span>
+                                            <span class="addon-name">De-shedding Treatment (+20m, +7,000 K)</span>
+                                        </label>
+                                        <label class="addon-checkbox-label">
+                                            <input type="checkbox" name="addons" value="nails">
+                                            <span class="custom-checkbox"></span>
+                                            <span class="addon-name">Nail Clip (+10m, +3,000 K)</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="wizard-buttons">
+                                    <button type="button" class="btn btn-primary btn-block" id="nextToStep2Btn">
+                                        <span>ရက်စွဲနှင့် အချိန်ရွေးချယ်ရန်</span>
+                                        <svg class="btn-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Step 2: Date & Time Panel -->
+                            <div class="wizard-step-content" id="wiz-content-2">
+                                <h3 class="simulator-card-title">ရက်စွဲနှင့် အချိန်ဇယား ရွေးချယ်ခြင်း</h3>
+                                
+                                <!-- Mock Calendar Grid -->
+                                <div class="form-group">
+                                    <label class="form-label">ရက်စွဲ ရွေးချယ်ရန် (Select Date)</label>
+                                    <div class="calendar-days-container" id="calendarDays">
+                                        <!-- Days dynamically rendered via JS -->
+                                    </div>
+                                </div>
+
+                                <!-- Time Slot Selector Grid -->
+                                <div class="form-group">
+                                    <label class="form-label">အချိန် ရွေးချယ်ရန် (Select Time Slot)</label>
+                                    <div class="time-slots-container" id="timeSlots">
+                                        <!-- Time slots dynamically rendered via JS -->
+                                    </div>
+                                </div>
+
+                                <div class="wizard-buttons split-buttons">
+                                    <button type="button" class="btn btn-secondary" id="backToStep1Btn">ရှေ့သို့</button>
+                                    <button type="button" class="btn btn-primary" id="nextToStep3Btn">
+                                        <span>ငွေချေစနစ်သို့ ဆက်သွားရန်</span>
+                                        <svg class="btn-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Step 3: Contact & Wallet Checkout -->
+                            <div class="wizard-step-content" id="wiz-content-3">
+                                <h3 class="simulator-card-title">အဆက်အသွယ်နှင့် ငွေပေးချေမှု</h3>
+                                
+                                <!-- Owner Details -->
+                                <div class="form-group">
+                                    <label class="form-label" for="ownerName">ပိုင်ရှင်အမည် (Owner Name)</label>
+                                    <input type="text" class="form-input" id="ownerName" placeholder="လူကြီးမင်းအမည်" value="ကိုမျိုးမင်းဦး">
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label" for="ownerPhone">ဖုန်းနံပါတ် (Phone Number)</label>
+                                    <input type="tel" class="form-input" id="ownerPhone" placeholder="09xxxxxxxxx" value="09456789123">
+                                    <span class="input-helper">SMS အသိပေးချက် ရရှိနိုင်ရန် ဖုန်းနံပါတ် ဖြည့်ပေးပါ။</span>
+                                </div>
+
+                                <!-- Wallet Select Option -->
+                                <div class="form-group">
+                                    <label class="form-label">ငွေပေးချေမှုစနစ် (Payment Method)</label>
+                                    <div class="payment-method-selector">
+                                        <label class="payment-method-option">
+                                            <input type="radio" name="paymentMethod" value="kbzpay" checked>
+                                            <span class="payment-box kbz-theme">
+                                                <span class="payment-icon">📱</span>
+                                                <span class="payment-text">KBZPay</span>
+                                            </span>
+                                        </label>
+                                        <label class="payment-method-option">
+                                            <input type="radio" name="paymentMethod" value="wavemoney">
+                                            <span class="payment-box wave-theme">
+                                                <span class="payment-icon">🌊</span>
+                                                <span class="payment-text">WaveMoney</span>
+                                            </span>
+                                        </label>
+                                        <label class="payment-method-option">
+                                            <input type="radio" name="paymentMethod" value="cash">
+                                            <span class="payment-box cash-theme">
+                                                <span class="payment-icon">💵</span>
+                                                <span class="payment-text">Cash on Service</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="wizard-buttons split-buttons">
+                                    <button type="button" class="btn btn-secondary" id="backToStep2Btn">ရှေ့သို့</button>
+                                    <button type="button" class="btn btn-primary" id="startSimBtn">
+                                        <span>ဘွတ်ကင်လုပ်ပြီး ခြေရာခံမည်</span>
+                                        <svg class="btn-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Live Simulation Results Display -->
+                    <div class="simulator-results-card">
+                        <div class="results-card-content" id="resultsCardContent">
+                            <h3 class="simulator-card-title text-white">Live Tracking & Bill Details</h3>
+                            
+                            <div class="results-container">
+                                <div class="result-row">
+                                    <span class="result-label">ရွေးချယ်ထားသော ဝန်ဆောင်မှု</span>
+                                    <span class="result-val" id="selectedPetText">Dog Spa Package</span>
+                                </div>
+                                <div class="result-row">
+                                    <span class="result-label">ရက်စွဲနှင့် အချိန်ဇယား</span>
+                                    <span class="result-val highlight-gold" id="selectedDateTimeText">- ရွေးချယ်မထားပါ -</span>
+                                </div>
+                                <div class="result-row">
+                                    <span class="result-label">အဆက်အသွယ်</span>
+                                    <span class="result-val" id="selectedContactText">- ဖြည့်သွင်းမထားပါ -</span>
+                                </div>
+                                <div class="result-row">
+                                    <span class="result-label">စုစုပေါင်း ကြာမြင့်ချိန်</span>
+                                    <span class="result-val highlight" id="calcDuration">60 မိနစ် (mins)</span>
+                                </div>
+                                <div class="result-row">
+                                    <span class="result-label">စုစုပေါင်း ကုန်ကျစရိတ်</span>
+                                    <span class="result-val highlight" id="calcPrice">15,000 MMK</span>
+                                </div>
+                                
+                                <hr class="results-divider">
+
+                                <div class="simulation-tracker-view">
+                                    <span class="result-label">Simulation Progress</span>
+                                    <div class="sim-progress-bg">
+                                        <div class="sim-progress-bar" id="simProgressBar"></div>
+                                    </div>
+                                    <div class="sim-status-text" id="simStatusText">ခြေရာခံရန် အဆင့်အားလုံးဖြည့်ပြီး ဘွတ်ကင်လုပ်ပါ</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mock Payment Processing Overlay -->
+                        <div class="checkout-processing-overlay" id="checkoutProcessing">
+                            <div class="checkout-spinner-box">
+                                <div class="spinner"></div>
+                                <h4 class="processing-title" id="processingTitle">ချိတ်ဆက်နေပါသည်...</h4>
+                                <p class="processing-desc" id="processingDesc">KBZPay App သို့ ချိတ်ဆက်ကာ ငွေပေးချေမှုကို စိစစ်နေပါသည်။ ကျေးဇူးပြု၍ ခေတ္တစောင့်ဆိုင်းပါ။</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <div class="logo">
+                    <svg class="logo-icon yellow-text" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.477 2 2 6.477 2 12c0 1.2.21 2.35.59 3.42l1.66-1.66a6.002 6.002 0 0 1 7.23-7.23l1.66-1.66A9.957 9.957 0 0 0 12 2zm8.59 6.58l-1.66 1.66a6.002 6.002 0 0 1-7.23 7.23l-1.66 1.66c1.07.38 2.22.59 3.42.59 5.523 0 10-4.477 10-10 0-1.2-.21-2.35-.59-3.42z"/>
+                        <circle cx="12" cy="12" r="4" />
+                        <path d="M12 6a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm-5.5 2.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm11 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM6.5 14.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm11 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                    </svg>
+                    <span class="logo-text">Pet Planet</span>
+                </div>
+                <p class="footer-tagline">ခေတ်မီဆန်းသစ်ပြီး အကောင်းဆုံး Spa & Grooming ဝန်ဆောင်မှုစနစ်</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html" class="footer-link">အဓိကစာမျက်နှာ</a>
+                <a href="services.html" class="footer-link">ဝန်ဆောင်မှုများ</a>
+                <a href="system.html" class="footer-link">စနစ်အကြောင်း</a>
+                <a href="booking.html" class="footer-link">ကြိုတင်ဘွတ်ကင်လုပ်ရန်</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Pet Planet (ပက်ပလနက်). All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Script file -->
+    <script src="script.js"></script>
+</body>
+</html>

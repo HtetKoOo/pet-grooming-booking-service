@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Planet - System Architecture</title>
+    
+    <!-- Google Fonts: Inter and Noto Sans Myanmar -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Myanmar:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Link to Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navigation Bar -->
+    <header class="main-header">
+        <div class="container navbar-container">
+            <a href="index.html" class="logo">
+                <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.477 2 2 6.477 2 12c0 1.2.21 2.35.59 3.42l1.66-1.66a6.002 6.002 0 0 1 7.23-7.23l1.66-1.66A9.957 9.957 0 0 0 12 2zm8.59 6.58l-1.66 1.66a6.002 6.002 0 0 1-7.23 7.23l-1.66 1.66c1.07.38 2.22.59 3.42.59 5.523 0 10-4.477 10-10 0-1.2-.21-2.35-.59-3.42z"/>
+                    <circle cx="12" cy="12" r="4" />
+                    <path d="M12 6a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm-5.5 2.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm11 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM6.5 14.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm11 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                </svg>
+                <span class="logo-text">Pet Planet</span>
+            </a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">အဓိကစာမျက်နှာ</a>
+                <a href="services.html" class="nav-link">ဝန်ဆောင်မှုများ</a>
+                <a href="system.html" class="nav-link active">စနစ်အကြောင်း</a>
+                <a href="impact.html" class="nav-link">အကျိုးကျေးဇူးများ</a>
+                <a href="booking.html" class="nav-link nav-btn-scroll">ကြိုတင်ဘွတ်ကင်လုပ်ရန်</a>
+            </nav>
+
+            <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Live Grooming Tracker (Visual Wizard Timeline) -->
+        <section id="system" class="section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">System Architecture & Live Tracker</span>
+                    <h2 class="section-title" id="trackerPageTitle">Live Tracker စနစ်ဖြင့် အချိန်နှင့်တပြေးညီ ခြေရာခံခြင်း</h2>
+                    <p class="section-description" id="trackerPageDesc">လူကြီးမင်းတို့၏ အချစ်တော်လေးများ Spa & Grooming ပြုလုပ်နေစဉ် မည်သည့်အဆင့်သို့ ရောက်ရှိနေသည်ကို စနစ်မှ တိုက်ရိုက်ခြေရာခံ စောင့်ကြည့်နိုင်ပါသည်။</p>
+                </div>
+
+                <!-- Visual Stepper -->
+                <div class="tracker-container">
+                    <div class="tracker-steps" id="trackerSteps">
+                        <!-- Step 1 -->
+                        <div class="step-node" id="step-1">
+                            <div class="step-circle">1</div>
+                            <div class="step-label">စနစ်ထဲ စတင်စာရင်းသွင်းခြင်း</div>
+                            <div class="step-sublabel">Check-In</div>
+                        </div>
+                        <div class="step-connector" id="connector-1"></div>
+                        <!-- Step 2 -->
+                        <div class="step-node" id="step-2">
+                            <div class="step-circle">2</div>
+                            <div class="step-label">ရေချိုးသန့်စင်ပေးခြင်း</div>
+                            <div class="step-sublabel">Bathing</div>
+                        </div>
+                        <div class="step-connector" id="connector-2"></div>
+                        <!-- Step 3 -->
+                        <div class="step-node" id="step-3">
+                            <div class="step-circle">3</div>
+                            <div class="step-label">အမွှေးအမျှင် ပုံဖော်ညှပ်ပေးခြင်း</div>
+                            <div class="step-sublabel">Styling</div>
+                        </div>
+                        <div class="step-connector" id="connector-3"></div>
+                        <!-- Step 4 -->
+                        <div class="step-node" id="step-4">
+                            <div class="step-circle">4</div>
+                            <div class="step-label">အိမ်ပြန်ရန် အဆင်သင့်ဖြစ်ခြင်း</div>
+                            <div class="step-sublabel">Ready</div>
+                        </div>
+                    </div>
+
+                    <!-- Tracker Progress Bar for system page -->
+                    <div class="tracker-system-progress" id="trackerSystemProgressBox" style="margin-bottom: 30px; display: none;">
+                        <span class="result-label">Tracking Progress</span>
+                        <div class="sim-progress-bg">
+                            <div class="sim-progress-bar" id="simProgressBar" style="width: 0%;"></div>
+                        </div>
+                        <div class="sim-status-text" id="simStatusText" style="margin-top: 6px;">စတင်ခြေရာခံရန် စောင့်ဆိုင်းနေပါသည်...</div>
+                    </div>
+
+                    <div class="tracker-info-box">
+                        <div class="info-icon">💬</div>
+                        <p class="tracker-info-text">Ready အဆင့်သို့ ရောက်ရှိပါက အလိုအလျောက် SMS စနစ်ဖြင့် အကြောင်းကြားပေးမည် ဖြစ်သည်။</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Future Milestones Section -->
+        <section id="milestones" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">The Road Ahead</span>
+                    <h2 class="section-title">ရှေ့ဆက်လှမ်းမည့် ခြေလှမ်းများနှင့် စနစ်မြှင့်တင်မှုများ</h2>
+                    <p class="section-description">ကျွန်ုပ်တို့၏ Pet Planet သည် ပိုမိုကောင်းမွန်သော ဝန်ဆောင်မှုများ ပေးအပ်နိုင်ရန်အတွက် နောက်ထပ် စနစ်သစ်များကို ဆက်လက်အကောင်အထည်ဖော်သွားမည် ဖြစ်ပါသည်။</p>
+                </div>
+
+                <div class="milestones-timeline">
+                    <!-- Milestone 1 -->
+                    <div class="milestone-item">
+                        <div class="milestone-number">01</div>
+                        <div class="milestone-content">
+                            <h3 class="milestone-title">Paws Loyalty Reward System</h3>
+                            <p class="milestone-text">စနစ်တကျ အမှတ်စုဆောင်းပြီး Rewards ပြန်လည်ရယူနိုင်မည့်စနစ်။ အချစ်တော်လေးများအတွက် ဝန်ဆောင်မှုရယူတိုင်း အမှတ်များစုဆောင်းကာ အထူးလျှော့ဈေးများနှင့် အခမဲ့ဝန်ဆောင်မှုများ ပြန်လည်လဲလှယ်နိုင်မည် ဖြစ်သည်။</p>
+                        </div>
+                    </div>
+                    <!-- Milestone 2 -->
+                    <div class="milestone-item">
+                        <div class="milestone-number">02</div>
+                        <div class="milestone-content">
+                            <h3 class="milestone-title">Predictive AI Analytics</h3>
+                            <p class="milestone-text">AI စနစ်သုံးပြီး ရာသီအလိုက် လိုအပ်ချက်များကို ကြိုတင်ခန့်မှန်းပေးခြင်း။ အပူချိန်နှင့် ရာသီဥတုအပြောင်းအလဲပေါ်မူတည်၍ အိမ်မွေးတိရစ္ဆာန်များ၏ ကျန်းမာရေးနှင့် အမွှေးအမျှင် ပြုပြင်ထိန်းသိမ်းမှု လိုအပ်ချက်များကို ကြိုတင်အကြံပြုပေးမည် ဖြစ်သည်။</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <div class="logo">
+                    <svg class="logo-icon yellow-text" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.477 2 2 6.477 2 12c0 1.2.21 2.35.59 3.42l1.66-1.66a6.002 6.002 0 0 1 7.23-7.23l1.66-1.66A9.957 9.957 0 0 0 12 2zm8.59 6.58l-1.66 1.66a6.002 6.002 0 0 1-7.23 7.23l-1.66 1.66c1.07.38 2.22.59 3.42.59 5.523 0 10-4.477 10-10 0-1.2-.21-2.35-.59-3.42z"/>
+                        <circle cx="12" cy="12" r="4" />
+                        <path d="M12 6a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm-5.5 2.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm11 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM6.5 14.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm11 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                    </svg>
+                    <span class="logo-text">Pet Planet</span>
+                </div>
+                <p class="footer-tagline">ခေတ်မီဆန်းသစ်ပြီး အကောင်းဆုံး Spa & Grooming ဝန်ဆောင်မှုစနစ်</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html" class="footer-link">အဓိကစာမျက်နှာ</a>
+                <a href="services.html" class="footer-link">ဝန်ဆောင်မှုများ</a>
+                <a href="system.html" class="footer-link">စနစ်အကြောင်း</a>
+                <a href="booking.html" class="footer-link">ကြိုတင်ဘွတ်ကင်လုပ်ရန်</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Pet Planet (ပက်ပလနက်). All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Instant SMS Mock Notification Popup -->
+    <div class="sms-toast" id="smsToast">
+        <div class="sms-toast-header">
+            <span class="sms-logo">💬 SMS Alert</span>
+            <button class="sms-close-btn" id="smsCloseBtn">&times;</button>
+        </div>
+        <div class="sms-toast-body">
+            <p class="sms-sender">From: Pet Planet</p>
+            <p class="sms-text" id="smsToastText">လူကြီးမင်း၏ အချစ်တော်လေးအတွက် Spa & Grooming Package ပြီးဆုံးပါသဖြင့် ဆိုင်တွင် လာရောက်ခေါ်ဆောင်နိုင်ပါပြီ။</p>
+        </div>
+    </div>
+
+    <!-- Script file -->
+    <script src="script.js"></script>
+</body>
+</html>

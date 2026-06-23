@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Planet - Impact Metrics</title>
+    
+    <!-- Google Fonts: Inter and Noto Sans Myanmar -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Myanmar:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Link to Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navigation Bar -->
+    <header class="main-header">
+        <div class="container navbar-container">
+            <a href="index.html" class="logo">
+                <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.477 2 2 6.477 2 12c0 1.2.21 2.35.59 3.42l1.66-1.66a6.002 6.002 0 0 1 7.23-7.23l1.66-1.66A9.957 9.957 0 0 0 12 2zm8.59 6.58l-1.66 1.66a6.002 6.002 0 0 1-7.23 7.23l-1.66 1.66c1.07.38 2.22.59 3.42.59(5.523 0 10-4.477 10-10 0-1.2-.21-2.35-.59-3.42z"/>
+                    <circle cx="12" cy="12" r="4" />
+                    <path d="M12 6a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm-5.5 2.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm11 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM6.5 14.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm11 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                </svg>
+                <span class="logo-text">Pet Planet</span>
+            </a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">အဓိကစာမျက်နှာ</a>
+                <a href="services.html" class="nav-link">ဝန်ဆောင်မှုများ</a>
+                <a href="system.html" class="nav-link">စနစ်အကြောင်း</a>
+                <a href="impact.html" class="nav-link active">အကျိုးကျေးဇူးများ</a>
+                <a href="booking.html" class="nav-link nav-btn-scroll">ကြိုတင်ဘွတ်ကင်လုပ်ရန်</a>
+            </nav>
+
+            <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Performance & Impact Metrics Section -->
+        <section id="impact" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Performance & Impact Metrics</span>
+                    <h2 class="section-title">ဒေတာအခြေပြု သက်သေပြချက်များ</h2>
+                    <p class="section-description">ကျွန်ုပ်တို့စနစ်ကို အသုံးပြုခြင်းဖြင့် လုပ်ငန်းလည်ပတ်မှုနှင့် ဝန်ဆောင်မှုအပိုင်းတွင် အောက်ပါအတိုင်း သိသာထင်ရှားစွာ တိုးတက်ပြောင်းလဲလာပါသည်။</p>
+                </div>
+
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-number text-red">-45%</div>
+                        <div class="metric-title">Phone Bookings</div>
+                        <div class="metric-desc">ဖုန်းဖြင့် ဘွတ်ကင်လုပ်ရမှု လျော့ကျခြင်း</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-number text-gold">0%</div>
+                        <div class="metric-title">Booking Conflicts</div>
+                        <div class="metric-desc">အချိန်ထပ်ခြင်း၊ အမှားအယွင်းများ လုံးဝမရှိခြင်း</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-number text-red">-30%</div>
+                        <div class="metric-title">Waiting Time</div>
+                        <div class="metric-desc">ဆိုင်တွင်း စောင့်ဆိုင်းရချိန် လျော့ချနိုင်ခြင်း</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-number text-green">+25%</div>
+                        <div class="metric-title">Add-on Sales</div>
+                        <div class="metric-desc">အပိုဆောင်း ဝန်ဆောင်မှုများကြောင့် ဝင်ငွေတိုးတက်လာခြင်း</div>
+                    </div>
+                </div>
+
+                <div class="metrics-caption-box">
+                    <p class="metrics-caption">အရှေ့ကောင်တာတွင် အလုပ်ရှုပ်မှု သက်သာစေပြီး Pets လေးများအပေါ် ပိုမိုအာရုံစိုက်နိုင်ကာ လုပ်ငန်းဝင်ငွေကို တိုးတက်စေပါသည်။</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <div class="logo">
+                    <svg class="logo-icon yellow-text" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.477 2 2 6.477 2 12c0 1.2.21 2.35.59 3.42l1.66-1.66a6.002 6.002 0 0 1 7.23-7.23l1.66-1.66A9.957 9.957 0 0 0 12 2zm8.59 6.58l-1.66 1.66a6.002 6.002 0 0 1-7.23 7.23l-1.66 1.66c1.07.38 2.22.59 3.42.59 5.523 0 10-4.477 10-10 0-1.2-.21-2.35-.59-3.42z"/>
+                        <circle cx="12" cy="12" r="4" />
+                        <path d="M12 6a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm-5.5 2.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm11 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM6.5 14.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm11 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                    </svg>
+                    <span class="logo-text">Pet Planet</span>
+                </div>
+                <p class="footer-tagline">ခေတ်မီဆန်းသစ်ပြီး အကောင်းဆုံး Spa & Grooming ဝန်ဆောင်မှုစနစ်</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html" class="footer-link">အဓိကစာမျက်နှာ</a>
+                <a href="services.html" class="footer-link">ဝန်ဆောင်မှုများ</a>
+                <a href="system.html" class="footer-link">စနစ်အကြောင်း</a>
+                <a href="booking.html" class="footer-link">ကြိုတင်ဘွတ်ကင်လုပ်ရန်</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Pet Planet (ပက်ပလနက်). All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Script file -->
+    <script src="script.js"></script>
+</body>
+</html>

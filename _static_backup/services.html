@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Planet - Services</title>
+    
+    <!-- Google Fonts: Inter and Noto Sans Myanmar -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Myanmar:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Link to Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navigation Bar -->
+    <header class="main-header">
+        <div class="container navbar-container">
+            <a href="index.html" class="logo">
+                <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.477 2 2 6.477 2 12c0 1.2.21 2.35.59 3.42l1.66-1.66a6.002 6.002 0 0 1 7.23-7.23l1.66-1.66A9.957 9.957 0 0 0 12 2zm8.59 6.58l-1.66 1.66a6.002 6.002 0 0 1-7.23 7.23l-1.66 1.66c1.07.38 2.22.59 3.42.59 5.523 0 10-4.477 10-10 0-1.2-.21-2.35-.59-3.42z"/>
+                    <circle cx="12" cy="12" r="4" />
+                    <path d="M12 6a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm-5.5 2.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm11 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM6.5 14.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm11 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                </svg>
+                <span class="logo-text">Pet Planet</span>
+            </a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">အဓိကစာမျက်နှာ</a>
+                <a href="services.html" class="nav-link active">ဝန်ဆောင်မှုများ</a>
+                <a href="system.html" class="nav-link">စနစ်အကြောင်း</a>
+                <a href="impact.html" class="nav-link">အကျိုးကျေးဇူးများ</a>
+                <a href="booking.html" class="nav-link nav-btn-scroll">ကြိုတင်ဘွတ်ကင်လုပ်ရန်</a>
+            </nav>
+
+            <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Core Product Pillars & Features Section -->
+        <section id="services" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Key Features</span>
+                    <h2 class="section-title">ကျွန်ုပ်တို့၏ ခေတ်မီဆန်းသစ်သော ဝန်ဆောင်မှုစနစ်</h2>
+                    <p class="section-description">ခွေးလေးများနှင့် ကြောင်လေးများ၏ မျိုးရိုးဗီဇ အရွယ်အစား (Breed Size) နှင့် အမွှေးအမျိုးအစား (Fur Coat Types) ပေါ်မူတည်၍ ဝန်ဆောင်မှုပေးရမည့် အချိန်နှင့် ဈေးနှုန်းကို စနစ်တကျ အလိုအလျောက် တွက်ချက်ပေးပါသည်။</p>
+                </div>
+
+                <div class="features-layout">
+                    <div class="features-info">
+                        <h3 class="features-subheading">စိတ်ကြိုက်ရွေးချယ်နိုင်သော အပိုဆောင်းဝန်ဆောင်မှုများ</h3>
+                        <p class="features-text">အခြေခံ Spa Package များအပြင် သင့်အချစ်တော်လေးများအတွက် အထူးလိုအပ်သော အောက်ပါ အပိုဆောင်းဝန်ဆောင်မှု (Add-ons) များကို တစ်ချက်နှိပ်ရုံဖြင့် လွယ်ကူစွာ ရွေးချယ်ပေါင်းစပ်နိုင်ပါသည် -</p>
+                        
+                        <!-- Interactive Add-ons Preview List -->
+                        <div class="interactive-addons-list">
+                            <div class="addon-preview-card" data-addon="teeth">
+                                <div class="addon-preview-header">
+                                    <span class="addon-preview-icon">🪥</span>
+                                    <span class="addon-preview-title">Teeth Cleaning</span>
+                                </div>
+                                <span class="addon-preview-price">+5,000 MMK</span>
+                            </div>
+                            <div class="addon-preview-card" data-addon="deshed">
+                                <div class="addon-preview-header">
+                                    <span class="addon-preview-icon">🧴</span>
+                                    <span class="addon-preview-title">De-shedding Treatment</span>
+                                </div>
+                                <span class="addon-preview-price">+7,000 MMK</span>
+                            </div>
+                            <div class="addon-preview-card" data-addon="nails">
+                                <div class="addon-preview-header">
+                                    <span class="addon-preview-icon">✂️</span>
+                                    <span class="addon-preview-title">Nail Clip</span>
+                                </div>
+                                <span class="addon-preview-price">+3,000 MMK</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Support Display -->
+                    <div class="checkout-feature-card">
+                        <div class="checkout-header">
+                            <div class="checkout-icon">💳</div>
+                            <h4>Frictionless Checkout</h4>
+                        </div>
+                        <p class="checkout-desc">မြန်မာနိုင်ငံရှိ လူသုံးအများဆုံး Mobile Wallets များဖြစ်သော KBZPay, WaveMoney တို့ဖြင့် ငွေပေးချေမှုများကို မြန်ဆန်ချောမွေ့စွာ ပြုလုပ်နိုင်ပါသည်။</p>
+                        <div class="wallet-logos">
+                            <div class="wallet-badge kbz">KBZPay</div>
+                            <div class="wallet-badge wave">WaveMoney</div>
+                            <div class="wallet-badge card">Mobile Banking</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-actions" style="text-align: center; margin-top: 60px;">
+                    <a href="booking.html" class="btn btn-primary">အခုပဲ စာရင်းသွင်း ကြိုတင်ဘွတ်ကင်လုပ်ရန်</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <div class="logo">
+                    <svg class="logo-icon yellow-text" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.477 2 2 6.477 2 12c0 1.2.21 2.35.59 3.42l1.66-1.66a6.002 6.002 0 0 1 7.23-7.23l1.66-1.66A9.957 9.957 0 0 0 12 2zm8.59 6.58l-1.66 1.66a6.002 6.002 0 0 1-7.23 7.23l-1.66 1.66c1.07.38 2.22.59 3.42.59 5.523 0 10-4.477 10-10 0-1.2-.21-2.35-.59-3.42z"/>
+                        <circle cx="12" cy="12" r="4" />
+                        <path d="M12 6a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm-5.5 2.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm11 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM6.5 14.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm11 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                    </svg>
+                    <span class="logo-text">Pet Planet</span>
+                </div>
+                <p class="footer-tagline">ခေတ်မီဆန်းသစ်ပြီး အကောင်းဆုံး Spa & Grooming ဝန်ဆောင်မှုစနစ်</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html" class="footer-link">အဓိကစာမျက်နှာ</a>
+                <a href="services.html" class="footer-link">ဝန်ဆောင်မှုများ</a>
+                <a href="system.html" class="footer-link">စနစ်အကြောင်း</a>
+                <a href="booking.html" class="footer-link">ကြိုတင်ဘွတ်ကင်လုပ်ရန်</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Pet Planet (ပက်ပလနက်). All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Script file -->
+    <script src="script.js"></script>
+</body>
+</html>
